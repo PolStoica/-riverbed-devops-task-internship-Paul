@@ -33,6 +33,12 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 - **Cum am diagnosticat-o:** am cautat in log si am gasit ca versiunile de actions/setuo-python si actions/setup/checkout era depreciate
 - **Cum am fixat-o și de ce:** am schimbat in versiunea curenta
 
+### Problemă #5 (main.py)
+- **Simptom:** apelarea main.py nu afisa nimic.
+- **Cum am diagnosticat-o:** visits_count e gresit
+- **Cum am fixat-o și de ce:** am schimbat din requests in r.get("visits") ca si in codul de mai sus, fixand logica
+
+
 (Adaugă/șterge secțiuni dacă ai găsit mai multe sau mai puține.)
 
 ---

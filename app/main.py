@@ -33,16 +33,17 @@ def visits() -> dict:
 @app.get("/visits/count")
 def visits_count() -> dict:
     count = r.get("visits")
-    return {"visits": int(count)if count else 0}
+    return {"visits": int(count) if count else 0}
 
 @app.post("/visits/reset")
 def visits_reset() -> dict:
     r.set("visits", 0)
     return {"visits": 0}
 
-
-# # Minimal UI
-# @app.get("/index", response_class=HTMLResponse)
-# def index() -> str:
-#     visits_count = requests.get("http://localhost:8000/visits")
-#     return f"<h1>Hello, you visited this page {visits_count} times</h1>"
+# Minimal UI
+@app.get("/index", response_class=HTMLResponse)
+def index() -> str:
+    count = r.get("visits")
+    visits_count = int(count) if count else 0
+    visits_text = "no" if visits_count == 0 else visits_count
+    return f"<h1>Hello, you visited this page {visits_text} times</h1>"
