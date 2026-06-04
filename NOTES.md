@@ -1,6 +1,4 @@
-# NOTES — [Numele tău]
-
-Copiază acest fișier ca `NOTES.md` și completează-l.
+# NOTES — [Stoica Paul-Isaac]
 
 Vrem să fie scurt — maxim 1 pagină. Mai mult contează claritatea decât lungimea.
 
