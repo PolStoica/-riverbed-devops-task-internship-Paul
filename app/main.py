@@ -31,12 +31,12 @@ def visits() -> dict:
     return {"visits": count}
 
 @app.get("/visits/count")
-def visits() -> dict:
+def visits_count() -> dict:
     count = r.get("visits")
     return {"visits": int(count)if count else 0}
 
 @app.put("/visits/reset")
-def visits() -> dict:
+def visits_reset() -> dict:
     r.set("visits", 0)
     return {"visits": 0}
 
