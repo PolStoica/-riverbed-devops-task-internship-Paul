@@ -10,17 +10,17 @@ Vrem să fie scurt — maxim 1 pagină. Mai mult contează claritatea decât lun
 
 Pentru fiecare problemă, scrie 2-3 propoziții:
 
-### Problemă #1 (Dockerfile)
-- **Simptom (ce eroare ai văzut?):**
-- **Cum am diagnosticat-o:**
-- **Cum am fixat-o și de ce:**
+### Problemă #1 (docker-compose.yml)
+- **Simptom (ce eroare ai văzut?):** Am deschis in browser http://localhost:8000/health si scrie "Can't connect to server" (dupa ce am dat docker compose up) asa ca, am deschis docker-compose.yml file-ul si am gasit o problema la port 8080:8000
+- **Cum am diagnosticat-o:** am considerat ce e o problema care trebuie sa rezolv, deoarece in tasks se cere explicit portul 8000 pe localhost. 
+- **Cum am fixat-o și de ce:** am schimbat din 8080 in 8000, ca sa pot accesa dupa cum se cerea si in README, asa ca acum portul e expus pe 8000 nu 8080.
 
 ### Problemă #2 (Dockerfile)
 - **Simptom:**
 - **Cum am diagnosticat-o:**
 - **Cum am fixat-o și de ce:**
 
-### Problemă #3 (docker-compose.yml)
+### Problemă #3 
 - **Simptom:**
 - **Cum am diagnosticat-o:**
 - **Cum am fixat-o și de ce:**
