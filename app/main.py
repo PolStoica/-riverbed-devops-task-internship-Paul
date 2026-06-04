@@ -23,20 +23,24 @@ def health() -> dict:
         redis_ok = False
     return {"status": "ok", "redis": redis_ok}
 
+
 @app.get("/visits")
 def visits() -> dict:
     count = r.incr("visits")
     return {"visits": count}
+
 
 @app.get("/visits/count")
 def visits_count() -> dict:
     count = r.get("visits")
     return {"visits": int(count) if count else 0}
 
+
 @app.post("/visits/reset")
 def visits_reset() -> dict:
     r.set("visits", 0)
     return {"visits": 0}
+
 
 # Minimal UI
 @app.get("/index", response_class=HTMLResponse)
