@@ -43,10 +43,10 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 
 Fii cinstit. Nu pierzi puncte dacă spui adevărul, dimpotrivă.
 
-- **Ce ai folosit:** (ChatGPT / Cursor / Copilot / altele)
-- **Unde te-a ajutat cel mai mult:** 
+- **Ce ai folosit:** Claude
+- **Unde te-a ajutat cel mai mult:** la implementarea healthcheckului, unde m-a atentionat ca versiunea de python 3.11-slim nu are curl, si mi-a sugerat ce sa fac. Dar cel mai important, cand nu imi zicea ca e healthy in urma unui docker compose ps, mi-a sugerat sa sterg cache-ul, lucru la care nu m-am gandit 
 - **Unde te-a încurcat sau ți-a dat un răspuns greșit:** (foarte interesant pentru noi!)
-- **Cum ai verificat ce-a generat:**
+- **Cum ai verificat ce-a generat:** ruland codul, verificand eventualele erori
 
 ---
 

@@ -30,6 +30,11 @@ def visits() -> dict:
     count = r.incr("visits")
     return {"visits": count}
 
+@app.get("/visits/count")
+def visits() -> dict:
+    count = r.get("visits")
+    return {"visits": int(count)if count else 0}
+
 
 
 # # Minimal UI
