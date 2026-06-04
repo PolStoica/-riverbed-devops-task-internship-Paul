@@ -35,6 +35,10 @@ def visits() -> dict:
     count = r.get("visits")
     return {"visits": int(count)if count else 0}
 
+@app.put("/visits/reset")
+def visits() -> dict:
+    r.set("visits", 0)
+    return {"visits": 0}
 
 
 # # Minimal UI
