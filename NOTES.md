@@ -13,10 +13,10 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 - **Cum am diagnosticat-o:** am considerat ce e o problema care trebuie sa rezolv, deoarece in tasks se cere explicit portul 8000 pe localhost. 
 - **Cum am fixat-o și de ce:** am schimbat din 8080 in 8000, ca sa pot accesa dupa cum se cerea si in README, asa ca acum portul e expus pe 8000 nu 8080.
 
-### Problemă #2 (Dockerfile)
-- **Simptom:**
-- **Cum am diagnosticat-o:**
-- **Cum am fixat-o și de ce:**
+### Problemă #2 (main.py)
+- **Simptom:** redis:true pe http://localhost:8000/health
+- **Cum am diagnosticat-o:** parea totul ok, pana am intrat sa ma uit prin cod, si am gasit in main.py o greseala de logica pentru endpointul health, orice ar fi arata true
+- **Cum am fixat-o și de ce:** am schimbat codul astfel incat daca redis trimite eroare, asta afiseaza
 
 ### Problemă #3 
 - **Simptom:**

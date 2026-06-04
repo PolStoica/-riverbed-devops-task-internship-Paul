@@ -22,7 +22,7 @@ def health() -> dict:
         r.ping()
         redis_ok = True
     except redis.RedisError:
-        redis_ok = True
+        redis_ok = False
     return {"status": "ok", "redis": redis_ok}
 
 @app.get("/visits")
