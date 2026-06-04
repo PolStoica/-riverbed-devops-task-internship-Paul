@@ -45,7 +45,7 @@
 
 ## 3. Folosirea AI-ului
 
-- **Ce ai folosit:** Claude
+- **Ce ai folosit:** Claude(Sonet 4.6 low) și Gemini(3.1 Pro)
 - **Unde te-a ajutat cel mai mult:** La implementarea healthcheck-ului, unde m-a atenționat că imaginea python:3.11-slim nu are curl instalat și mi-a sugerat ce să fac. Dar cel mai important, când nu îmi arăta healthy în urma unui docker compose ps, mi-a sugerat să șterg cache-ul, lucru la care nu m-am gândit.
 - **Unde te-a încurcat sau ți-a dat un răspuns greșit:** Nu a ținut cont de principii de programare precum DRY, a prioritizat livrarea unui răspuns rapid în loc de corectitudine și explicații clare.
 - **Cum ai verificat ce-a generat:** Rulând codul, verificând eventualele erori și citind log-urile — acest lucru m-a ajutat mult.
