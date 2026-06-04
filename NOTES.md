@@ -24,9 +24,9 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 - **Cum am fixat-o și de ce:** am schimbat din localhost in redis, deoarece docker compose creeaza o retea interna intre containere, iar serviciul se numeste redis, (lucrul acesta se vede cu cateva randuri mai jos).
 
 ### Problemă #4 (CI)
-- **Simptom:**
-- **Cum am diagnosticat-o:**
-- **Cum am fixat-o și de ce:**
+- **Simptom:** in github, la actions am observat ca nu e in regula
+- **Cum am diagnosticat-o:** m-am uitat in ci.yml si am citit ce e acolo, si am corelat cu ce imi zicea in actions ca error si warning
+- **Cum am fixat-o și de ce:** am schimbat versiunea de python, ca sa fie acceasi in github, ca si cea locala, si cea in care a fost scris codul. 
 
 (Adaugă/șterge secțiuni dacă ai găsit mai multe sau mai puține.)
 
