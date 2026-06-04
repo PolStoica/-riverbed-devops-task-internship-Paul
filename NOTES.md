@@ -16,12 +16,12 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 ### Problemă #2 (main.py)
 - **Simptom:** redis:true pe http://localhost:8000/health
 - **Cum am diagnosticat-o:** parea totul ok, pana am intrat sa ma uit prin cod, si am gasit in main.py o greseala de logica pentru endpointul health, orice ar fi arata true
-- **Cum am fixat-o și de ce:** am schimbat codul astfel incat daca redis trimite eroare, asta afiseaza
+- **Cum am fixat-o și de ce:** am schimbat codul astfel incat daca redis trimite eroare se afiseaza pe endpoint.
 
-### Problemă #3 
-- **Simptom:**
-- **Cum am diagnosticat-o:**
-- **Cum am fixat-o și de ce:**
+### Problemă #3 (docker-compose.yml)
+- **Simptom:** am gasit eroare cand am vrut sa apelez http://localhost:8000/visits cu: "cannot connect to Error 111 connecting to localhost:6379"
+- **Cum am diagnosticat-o:** nu ar trebui sa apeleze localhost6379. Ar fi trebuit sa se apeleze cu numele serviciului. Am vazut si comentariul #redis
+- **Cum am fixat-o și de ce:** am schimbat din localhost in redis, deoarece docker compose creeaza o retea interna intre containere, iar serviciul se numeste redis, (lucrul acesta se vede cu cateva randuri mai jos).
 
 ### Problemă #4 (CI)
 - **Simptom:**
