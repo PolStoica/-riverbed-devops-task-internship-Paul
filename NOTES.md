@@ -34,8 +34,8 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 
 ## 2. Healthcheck-ul adăugat
 
-- **Cum funcționează:**
-- **De ce ai ales configurarea asta (interval, retries, timeout):**
+- **Cum funcționează:** dupa cele 15 secunde care le-am pus sa astepte pana incepe sa verifice, o sa verifice din 30 in 30 de secunde daca aplicatia e vie si functioneaza, daca nu raspunde de 3 ori la rand in cate 2 secunde, healtcheckul devine "unhealthy". 
+- **De ce ai ales configurarea asta (interval, retries, timeout):**  asa am gasit un examplu in documentele oficiale de la git. Am ajustat parametrii incat sa fie cat mai mici dar si responsive si am ajuns la valorile acestea, invervalul fiind destul de rapid incat sa detectez daca serviciul nu mai raspunde, dar timeoutul mic deoarece serviciul e mic si ar trebui sa raspunda foarte rapid. Retries am ales 3 deoarece evita un false negative (daca ar fi fost 1), dar nici mare incat sa ruleze aplicatia mult timp fara sa semnaleze ca e unhealthy
 
 ---
 
@@ -44,7 +44,7 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 Fii cinstit. Nu pierzi puncte dacă spui adevărul, dimpotrivă.
 
 - **Ce ai folosit:** (ChatGPT / Cursor / Copilot / altele)
-- **Unde te-a ajutat cel mai mult:**
+- **Unde te-a ajutat cel mai mult:** 
 - **Unde te-a încurcat sau ți-a dat un răspuns greșit:** (foarte interesant pentru noi!)
 - **Cum ai verificat ce-a generat:**
 
