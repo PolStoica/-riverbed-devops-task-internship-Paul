@@ -8,8 +8,8 @@ import requests
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
-REDIS_HOST = os.getenv("REDIS_HOST")
-REDIS_PORT = int(os.getenv("REDIS_PORT"))
+REDIS_HOST = os.getenv("REDIS_HOST", "redis")
+REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
 
 app = FastAPI(title="DevOps Intern Demo", version="0.1.0")
 r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)
