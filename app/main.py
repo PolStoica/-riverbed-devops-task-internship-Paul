@@ -3,8 +3,6 @@
 import os
 
 import redis
-import random
-import requests
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
@@ -15,7 +13,7 @@ app = FastAPI(title="DevOps Intern Demo", version="0.1.0")
 r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)
 
 
-### Bakend API endpoints
+# Backend API endpoints
 @app.get("/health")
 def health() -> dict:
     try:
