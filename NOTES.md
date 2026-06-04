@@ -65,6 +65,7 @@
 
 ## 5. Întrebări / observații
 
+- Apelarea http://localhost:8000/index returnează că pagina a fost vizitată cel puțin o dată, nu începe de la 0. Ar fi trebuit sa fie 0, și doar când se apelează http://localhost:8000/visits să crească?
 - Healthcheck-ul folosește curl instalat manual în imagine — e abordarea corectă?
 - Care e procesul de onboarding pentru practică, există documentație sau înveți direct din cod?
 - Ce ar trebui să știu cel mai bine pentru interviul ce urmează?
