@@ -24,3 +24,18 @@ def test_visits_increments():
         response = _client().get("/visits")
     assert response.status_code == 200
     assert response.json() == {"visits": 42}
+
+
+def test_count():
+    with patch("app.main.r") as mock_redis:
+        mock_redis.get.return_value = 42
+        response = _client().get("/visits/count")
+    assert response.status_code == 200
+    assert response.json() == {"visits": 42}
+
+
+def test_reset():
+    with patch("app.main.r") as mock_redis:
+        response = _client().post("/visits/reset")
+    assert response.status_code == 200
+    assert response.json() == {"visits": 0}
