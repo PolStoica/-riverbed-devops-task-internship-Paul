@@ -46,4 +46,10 @@ def index() -> str:
     count = r.get("visits")
     visits_count = int(count) if count else 0
     visits_text = "no" if visits_count == 0 else visits_count
-    return f"<h1>Hello, you visited this page {visits_text} times</h1>"
+    text = f"""
+        <h1>Hello, you visited this page {visits_text} times</h1>
+        <button onclick="fetch('/visits/reset', {{method:'POST'}}).then(() => location.reload())">
+            Reset
+        </button>
+        """
+    return text
