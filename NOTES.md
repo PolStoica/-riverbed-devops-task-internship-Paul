@@ -61,7 +61,7 @@
 - Orchestrare (Kubernetes)
 - Monitoring (LGTM stack)
 
----
+----
 
 ## 5. Întrebări / observații
 
