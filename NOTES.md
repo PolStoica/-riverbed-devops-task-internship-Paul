@@ -28,6 +28,11 @@ Pentru fiecare problemă, scrie 2-3 propoziții:
 - **Cum am diagnosticat-o:** m-am uitat in ci.yml si am citit ce e acolo, si am corelat cu ce imi zicea in actions ca error si warning
 - **Cum am fixat-o și de ce:** am schimbat versiunea de python, ca sa fie acceasi in github, ca si cea locala, si cea in care a fost scris codul. 
 
+### Problemă #5 (CI)
+- **Simptom:** am gasit 2 warnings in actions
+- **Cum am diagnosticat-o:** am cautat in log si am gasit ca versiunile de actions/setuo-python si actions/setup/checkout era depreciate
+- **Cum am fixat-o și de ce:** am schimbat in versiunea curenta
+
 (Adaugă/șterge secțiuni dacă ai găsit mai multe sau mai puține.)
 
 ---
