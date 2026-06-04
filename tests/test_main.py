@@ -37,5 +37,6 @@ def test_count():
 def test_reset():
     with patch("app.main.r") as mock_redis:
         response = _client().post("/visits/reset")
+        mock_redis.set.assert_called_once_with("visits", 0)
     assert response.status_code == 200
     assert response.json() == {"visits": 0}
